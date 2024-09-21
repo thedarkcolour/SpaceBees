@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "combs",
+    "key": {
+      "#": {
+        "item": "spacebees:bee_comb_barren"
+      }
+    },
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "result": {
+      "item": "spacebees:block_bee_comb_barren"
+    }
+  }

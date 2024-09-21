@@ -1,0 +1,17 @@
+{
+    "type": "forestry:centrifuge",
+    "input": {
+      "item": "spacebees:bee_comb_barren"
+    },
+    "products": [
+      {
+        "chance": 1.0,
+        "item": "forestry:beeswax"
+      },
+      {
+        "chance": 0.5,
+        "item": "forestry:honey_drop_honey"
+      }
+    ],
+    "time": 20
+  }

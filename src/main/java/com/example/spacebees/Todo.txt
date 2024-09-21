@@ -1,0 +1,11 @@
+TODO
+------------------
+---Cleanup---
+Properly include dependencies
+
+---Featueres---
+
+make an Alveary block
+Implement a bee effect
+Implement an allele
+Implement a flower

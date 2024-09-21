@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "particle": "spacebees:block/lunar_hive_side",
+        "down": "spacebees:block/lunar_hive_top",
+        "up": "spacebees:block/lunar_hive_top",
+        "north": "spacebees:block/lunar_hive_side",
+        "east": "spacebees:block/lunar_hive_side",
+        "south": "spacebees:block/lunar_hive_side",
+        "west": "spacebees:block/lunar_hive_side"
+    }
+}
