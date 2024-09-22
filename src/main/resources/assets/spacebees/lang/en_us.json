@@ -116,8 +116,25 @@
 "allele.forestry.bee_species.bee_unusual": "Unusual",
 "allele.forestry.bee_species.bee_spatial": "Spatial",
 "allele.forestry.bee_species.bee_mystical": "Mystical",
+"allele.forestry.bee_species.bee_smedley": "Smedley",
+
+"allele.forestry.bee_species.bee_smedley.desc": "A base touched by the Smedley Bee is never the same.|Ancient Chinese Proverb",
+
+
+"allele.forestry.flower_type.spacebees.flower_type_water": "Lily Pads",
+"allele.forestry.flower_type.spacebees.flower_type_sugar": "Reeds",
+"allele.forestry.flower_type.spacebees.flower_type_rock": "Rocks",
+"allele.forestry.flower_type.spacebees.flower_type_book": "Books",
+"allele.forestry.flower_type.spacebees.flower_type_dead": "Dead Bushes",
+"allele.forestry.flower_type.spacebees.flower_type_redstone": "Redstone",
+"allele.forestry.flower_type.spacebees.flower_type_wood": "Wood",
+"allele.forestry.flower_type.spacebees.flower_type_leaves": "Leaves",
+"allele.forestry.flower_type.spacebees.flower_type_sapling": "Saplings",
+"allele.forestry.flower_type.spacebees.flower_type_fruit": "Fruit",
+"allele.forestry.flower_type.spacebees.flower_type_mystical": "Mystical",
 
 "block.spacebees.beehive_luna": "Lunar Hive",
 "item.spacebees.bee_comb_barren": "Barren Comb",
+"item.spacebees.bee_comb_water": "Water Comb",
 "block.spacebees.block_bee_comb_barren": "Barren Comb Block"
 }

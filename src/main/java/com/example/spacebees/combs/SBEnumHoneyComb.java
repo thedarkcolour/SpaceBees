@@ -7,8 +7,9 @@ import forestry.api.core.IItemSubtype;
 import net.minecraft.util.StringRepresentable;
 
 public enum SBEnumHoneyComb implements StringRepresentable, IItemSubtype, IBlockSubtype {
-    BARREN(new Color(0x736c44), new Color(0xc2bea7));
-    
+    BARREN(new Color(0x736c44), new Color(0xc2bea7)),
+	WATER(new Color(2568911), new Color(7973065));
+
 	public static final SBEnumHoneyComb[] VALUES = values();
 
 	public final String name;

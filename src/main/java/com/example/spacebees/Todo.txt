@@ -23,3 +23,9 @@ write scripts
 Mod intergration
 IC2 replacement? https://www.curseforge.com/minecraft/mc-mods/ic2-classic 
 Botania is Botania https://www.curseforge.com/minecraft/mc-mods/botania
+
+
+
+data/tags/blocks/flowers needs following adjustments
+leaves.json and wood.json not currently full, there is probably a better way than explicitly naming every wood and leaves "OH YOU LIKE FORESTRY, NAME EVERY LEAF"
+mystical.json requires botania flowers, havent added botania yet.

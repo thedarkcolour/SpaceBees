@@ -13,8 +13,6 @@ import forestry.api.apiculture.ForestryBeeSpecies;
 import forestry.api.core.HumidityType;
 import forestry.api.core.TemperatureType;
 import forestry.api.genetics.ForestryTaxa;
-import static forestry.apiculture.features.ApicultureItems.BEE_COMBS;
-import static com.example.spacebees.combs.SpaceBeesApicultureItems.BEE_COMBS;
 
 
 //  See DefaultBeeSpecies for examples
@@ -47,6 +45,20 @@ public class CustomBeeSpecies {
 				})
 				.setGlint(true)
 				.setAuthority("PantyRush");
+		
+		// Smedley
+		apiculture.registerSpecies(SpaceBeesSpecies.SMEDLEY, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_SMEDLEY, true, new Color(0x4f10c4))
+		//.addProduct(BEE_COMBS.stack(EnumHoneyComb.PARCHED), 0.30f)
+				.setBody(new Color(0x281e5c))
+				.setStripes(new Color(0x9e7b3a))
+				.setGenome(genome -> {
+					genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_NONE);
+				})		
+				.addMutations(mutations -> {
+					mutations.add(SpaceBeesSpecies.LUNA, ForestryBeeSpecies.INDUSTRIOUS, 10);
+				})
+				.setAuthority("PantyRush");
+
 
 		//Binnie's 
 		// https://github.com/ForestryMC/Binnie/blob/master-MC1.12/extrabees/src/main/java/binnie/extrabees/genetics/ExtraBeeDefinition.java
@@ -58,9 +70,10 @@ public class CustomBeeSpecies {
 				.addProduct(SpaceBeesApicultureItems.BEE_COMBS.stack(SBEnumHoneyComb.BARREN), 0.30f)
 				.setGenome(genome -> {
 					genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWER);
-					genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_3);
+					genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
 					genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_UP_2);
 					genome.set(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_2);
+					genome.set(BeeChromosomes.FLOWER_TYPE, SpaceBeeAlleles.FLOWER_TYPE_DEAD);
 					
 			})		
 				.addMutations(mutations -> {
@@ -228,6 +241,16 @@ public class CustomBeeSpecies {
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.WATER, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_WATER, true, new Color(0x94a2ff))
 		.setBody(new Color(0xffdc16))
+		.setHumidity(HumidityType.DAMP)
+		.addProduct(SpaceBeesApicultureItems.BEE_COMBS.stack(SBEnumHoneyComb.WATER), 0.30f)
+
+		.setGenome(genome -> {
+			genome.set(BeeChromosomes.FLOWER_TYPE, SpaceBeeAlleles.FLOWER_TYPE_WATER);
+			genome.set(BeeChromosomes.TOLERATES_RAIN, true);
+			genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWEST);
+			genome.set(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_BOTH_1);
+
+		})
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.RIVER, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_RIVER, true, new Color(0x83b3d4))
 		.setBody(new Color(0xffdc16))

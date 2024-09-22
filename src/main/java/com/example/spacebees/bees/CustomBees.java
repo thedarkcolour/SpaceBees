@@ -6,6 +6,7 @@ import java.util.function.Supplier;
 import com.example.spacebees.combs.SBEnumHoneyComb;
 
 import forestry.api.plugin.IForestryPlugin;
+import forestry.apiculture.FlowerType;
 import forestry.apiculture.features.ApicultureItems;
 import forestry.apiculture.items.EnumHoneyComb;
 import forestry.api.apiculture.ForestryBeeSpecies;
@@ -37,7 +38,22 @@ public class CustomBees implements IForestryPlugin{
         		apiculture.registerHive(SpaceBeesSpecies.LUNA, SpaceBeesHiveDefinition.LUNA)
                	    .addDrop(0.80, SpaceBeesSpecies.LUNA, barrenComb, 0.7f)
                     .addDrop(0.03, ForestryBeeSpecies.VALIANT, honeyComb);
-    }        
+                
+                apiculture.registerFlowerType(SpaceBeesFlowerType.WATER, new FlowerType(SpaceBeesTags.Blocks.WATER_FLOWERS, true));
+                apiculture.registerFlowerType(SpaceBeesFlowerType.SUGAR, new FlowerType(SpaceBeesTags.Blocks.SUGAR_FLOWERS, true));
+                apiculture.registerFlowerType(SpaceBeesFlowerType.ROCK, new FlowerType(SpaceBeesTags.Blocks.ROCK_FLOWERS, true));
+                apiculture.registerFlowerType(SpaceBeesFlowerType.BOOK, new FlowerType(SpaceBeesTags.Blocks.BOOK_FLOWERS, true));
+                apiculture.registerFlowerType(SpaceBeesFlowerType.DEAD, new FlowerType(SpaceBeesTags.Blocks.DEAD_FLOWERS, true));
+                apiculture.registerFlowerType(SpaceBeesFlowerType.REDSTONE, new FlowerType(SpaceBeesTags.Blocks.REDSTONE_FLOWERS, true));
+                apiculture.registerFlowerType(SpaceBeesFlowerType.WOOD, new FlowerType(SpaceBeesTags.Blocks.WOOD_FLOWERS, true));
+                apiculture.registerFlowerType(SpaceBeesFlowerType.LEAVES, new FlowerType(SpaceBeesTags.Blocks.LEAVES_FLOWERS, true));
+                apiculture.registerFlowerType(SpaceBeesFlowerType.FRUIT, new FlowerType(SpaceBeesTags.Blocks.FRUIT_FLOWERS, true));
+                apiculture.registerFlowerType(SpaceBeesFlowerType.SAPLING, new FlowerType(SpaceBeesTags.Blocks.SAPLING_FLOWERS, true));
+                apiculture.registerFlowerType(SpaceBeesFlowerType.MYSTICAL, new FlowerType(SpaceBeesTags.Blocks.MYSTICAL_FLOWERS, true));
+
+    }       
+
+
     public ResourceLocation id() {
        return ID;
    }
