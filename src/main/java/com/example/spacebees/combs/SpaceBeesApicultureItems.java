@@ -11,5 +11,5 @@ import forestry.modules.features.ModFeatureRegistry;
 @FeatureProvider
 public class SpaceBeesApicultureItems {
 	public static final IFeatureRegistry REGISTRY = ModFeatureRegistry.get(SpaceBeesModuleIds.APICULTURE); 
-    public static final FeatureItemGroup<ItemHoneyComb, SBEnumHoneyComb> SBBEE_COMBS = REGISTRY.itemGroup(ItemHoneyComb::new, "bee_comb", SBEnumHoneyComb.VALUES);
+    public static final FeatureItemGroup<ItemHoneyComb, SBEnumHoneyComb> BEE_COMBS = REGISTRY.itemGroup(ItemHoneyComb::new, "bee_comb", SBEnumHoneyComb.VALUES);
 }

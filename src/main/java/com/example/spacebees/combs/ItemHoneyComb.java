@@ -24,11 +24,11 @@ public class ItemHoneyComb extends ItemForestry implements IColoredItem {
 
 	@Override
 	public int getColorFromItemStack(ItemStack itemstack, int tintIndex) {
-		SBEnumHoneyComb honeyComb = this.type;
+		SBEnumHoneyComb barrenComb = this.type;
 		if (tintIndex == 1) {
-			return honeyComb.primaryColor;
+			return barrenComb.primaryColor;
 		} else {
-			return honeyComb.secondaryColor;
+			return barrenComb.secondaryColor;
 		}
 	}
 }

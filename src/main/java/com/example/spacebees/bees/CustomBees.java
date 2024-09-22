@@ -25,7 +25,7 @@ public class CustomBees implements IForestryPlugin{
 		return () -> List.of(ApicultureItems.BEE_COMBS.stack(type));
 	}
     private static Supplier<List<ItemStack>> getSBHoneyComb(SBEnumHoneyComb type) {
-		return () -> List.of(SpaceBeesApicultureItems.SBBEE_COMBS.stack(type));
+		return () -> List.of(SpaceBeesApicultureItems.BEE_COMBS.stack(type));
 	}
     
     Supplier<List<ItemStack>> honeyComb = getHoneyComb(EnumHoneyComb.HONEY);

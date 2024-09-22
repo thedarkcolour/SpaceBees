@@ -3,6 +3,7 @@ package com.example.spacebees.bees;
 import java.awt.Color;
 
 import com.example.spacebees.combs.SBEnumHoneyComb;
+import com.example.spacebees.combs.SpaceBeesApicultureItems;
 
 import forestry.api.genetics.alleles.BeeChromosomes;
 import forestry.api.genetics.alleles.ForestryAlleles;
@@ -13,7 +14,7 @@ import forestry.api.core.HumidityType;
 import forestry.api.core.TemperatureType;
 import forestry.api.genetics.ForestryTaxa;
 import static forestry.apiculture.features.ApicultureItems.BEE_COMBS;
-import static com.example.spacebees.combs.SpaceBeesApicultureItems.SBBEE_COMBS;
+import static com.example.spacebees.combs.SpaceBeesApicultureItems.BEE_COMBS;
 
 
 //  See DefaultBeeSpecies for examples
@@ -25,8 +26,8 @@ public class CustomBeeSpecies {
 		// apiculture.registerSpecies(resource location, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_XXX, true?, new Color(0xa3999c))
 		// Lunar
 		apiculture.registerSpecies(SpaceBeesSpecies.LUNA, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_LUNA, true, new Color(0xa3999c))
-				.addProduct(BEE_COMBS.stack(EnumHoneyComb.PARCHED), 0.20f)
-				.addProduct(SBBEE_COMBS.stack(SBEnumHoneyComb.BARREN), 0.45f)
+				.addProduct(forestry.apiculture.features.ApicultureItems.BEE_COMBS.stack(EnumHoneyComb.PARCHED), 0.20f)
+				.addProduct(SpaceBeesApicultureItems.BEE_COMBS.stack(SBEnumHoneyComb.BARREN), 0.45f)
 				.setGenome(genome -> {
 					genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWER);
 					genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_3);
@@ -54,7 +55,7 @@ public class CustomBeeSpecies {
 				.setBody(new Color(0xcbe374))
 				.setTemperature(TemperatureType.HOT)
 				.setHumidity(HumidityType.ARID)
-				.addProduct(SBBEE_COMBS.stack(SBEnumHoneyComb.BARREN), 0.30f)
+				.addProduct(SpaceBeesApicultureItems.BEE_COMBS.stack(SBEnumHoneyComb.BARREN), 0.30f)
 				.setGenome(genome -> {
 					genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWER);
 					genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_3);

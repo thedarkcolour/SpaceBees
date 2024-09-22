@@ -1,5 +1,5 @@
 Broken Stuff
 ----------------------
-Custom hives dont tick, known issue related to tile entity
+Custom hives dont tick, known issue related to tile entity, known issue
 texture on custom block_bee_combs broken, its using the default texture
-colors on combs are wrong
+colors on combs are wrong too, registration issue?
