@@ -2,6 +2,7 @@ TODO
 ------------------
 ---Cleanup---
 Properly include dependencies
+Fix Taxa
 
 ---Featueres---
 
@@ -9,3 +10,14 @@ make an Alveary block
 Implement a bee effect
 Implement an allele
 Implement a flower
+
+
+---extrabees import---
+write scripts
+    Pull name data and format for en_us.json
+    https://github.com/ForestryMC/Binnie/blob/master-MC1.12/extrabees/src/main/resources/assets/extrabees/lang/en_US.lang
+
+    pull branch data from https://github.com/ForestryMC/Binnie/blob/master-MC1.12/extrabees/src/main/java/binnie/extrabees/genetics/ExtraBeeBranchDefinition.java 
+    format for CustomBees.java or should I have branches?
+
+    Pull branch information for Taxa? 
