@@ -2,9 +2,11 @@ package com.example.spacebees.bees;
 
 import forestry.api.IForestryApi;
 import forestry.api.apiculture.IFlowerType;
+import forestry.api.apiculture.genetics.IBeeEffect;
 import forestry.api.genetics.alleles.BeeChromosomes;
 import forestry.api.genetics.alleles.IAlleleManager;
 import forestry.api.genetics.alleles.IRegistryAllele;
+import com.example.spacebees.bees.genetics.effects.*;
 
 
 public class SpaceBeeAlleles {
@@ -20,6 +22,12 @@ public class SpaceBeeAlleles {
     public static final IRegistryAllele<IFlowerType> FLOWER_TYPE_SAPLING = REGISTRY.registryAllele(SpaceBeesFlowerType.SAPLING, BeeChromosomes.FLOWER_TYPE);
     public static final IRegistryAllele<IFlowerType> FLOWER_TYPE_FRUIT = REGISTRY.registryAllele(SpaceBeesFlowerType.FRUIT, BeeChromosomes.FLOWER_TYPE);
     public static final IRegistryAllele<IFlowerType> FLOWER_TYPE_MYSTICAL = REGISTRY.registryAllele(SpaceBeesFlowerType.MYSTICAL, BeeChromosomes.FLOWER_TYPE);
+
+    public static final IRegistryAllele<IBeeEffect> EFFECT_LUNAR = REGISTRY.registryAllele(SpaceBeeEffects.LUNAR, BeeChromosomes.EFFECT);
+    public static final IRegistryAllele<IBeeEffect> EFFECT_LUNACY = REGISTRY.registryAllele(SpaceBeeEffects.LUNACY, BeeChromosomes.EFFECT);
+
+
+
 
 
 }

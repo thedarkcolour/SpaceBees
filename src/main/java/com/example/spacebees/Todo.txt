@@ -3,11 +3,11 @@ TODO
 ---Cleanup---
 Properly include dependencies
 Fix Taxa
-
+Properly credit people from forestry/extrabees etc
 ---Featueres---
 
 make an Alveary block
-Implement a bee effect
+Implement a bee effect (custom effect for lunar bees that combines high jump and slow fall)
 Implement an allele
 Implement a flower
 

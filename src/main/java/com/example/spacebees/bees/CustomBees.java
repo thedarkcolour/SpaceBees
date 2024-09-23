@@ -8,13 +8,16 @@ import com.example.spacebees.combs.SBEnumHoneyComb;
 import forestry.api.plugin.IForestryPlugin;
 import forestry.apiculture.FlowerType;
 import forestry.apiculture.features.ApicultureItems;
+import forestry.apiculture.genetics.effects.PotionBeeEffect;
 import forestry.apiculture.items.EnumHoneyComb;
+import forestry.api.apiculture.ForestryBeeEffects;
 import forestry.api.apiculture.ForestryBeeSpecies;
 import forestry.api.plugin.IApicultureRegistration;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ItemStack;
 import com.example.spacebees.combs.SpaceBeesApicultureItems;
-
+import com.example.spacebees.bees.genetics.effects.*;
 // Use Default Forestry Plugin as an example
 // https://github.com/thedarkcolour/ForestryMC/blob/dev/1.19.x/src/main/java/forestry/plugin/DefaultForestryPlugin.java
 
@@ -50,6 +53,11 @@ public class CustomBees implements IForestryPlugin{
                 apiculture.registerFlowerType(SpaceBeesFlowerType.FRUIT, new FlowerType(SpaceBeesTags.Blocks.FRUIT_FLOWERS, true));
                 apiculture.registerFlowerType(SpaceBeesFlowerType.SAPLING, new FlowerType(SpaceBeesTags.Blocks.SAPLING_FLOWERS, true));
                 apiculture.registerFlowerType(SpaceBeesFlowerType.MYSTICAL, new FlowerType(SpaceBeesTags.Blocks.MYSTICAL_FLOWERS, true));
+
+                apiculture.registerBeeEffect(SpaceBeeEffects.LUNAR, new PotionBeeEffect(false, MobEffects.SLOW_FALLING, 1000));
+                apiculture.registerBeeEffect(SpaceBeeEffects.LUNACY, new PotionBeeEffect(false, MobEffects.JUMP, 1000));
+
+
 
     }       
 

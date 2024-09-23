@@ -2,6 +2,8 @@ package com.example.spacebees.bees;
 
 import java.awt.Color;
 
+import org.antlr.v4.parse.ANTLRParser.blockEntry_return;
+
 import com.example.spacebees.combs.SBEnumHoneyComb;
 import com.example.spacebees.combs.SpaceBeesApicultureItems;
 
@@ -30,6 +32,7 @@ public class CustomBeeSpecies {
 					genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWER);
 					genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_3);
 					genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_1);
+					genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_LUNAR);
 				})
 				.setAuthority("PantyRush");
 					
@@ -39,6 +42,7 @@ public class CustomBeeSpecies {
 				//.addProduct(BEE_COMBS.stack(EnumHoneyComb.PARCHED), 0.30f)
 				.setGenome(genome -> {
 					genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_NONE);
+					genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_LUNACY);
 				})		
 				.addMutations(mutations -> {
 					mutations.add(SpaceBeesSpecies.LUNA, ForestryBeeSpecies.COMMON, 10);

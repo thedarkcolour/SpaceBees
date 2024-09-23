@@ -133,6 +133,11 @@
 "allele.forestry.flower_type.spacebees.flower_type_fruit": "Fruit",
 "allele.forestry.flower_type.spacebees.flower_type_mystical": "Mystical",
 
+"allele.forestry.bee_effect.spacebees.bee_effect_lunar": "Lunar Fall",
+"allele.forestry.bee_effect.spacebees.bee_effect_lunacy": "Lunar Jump",
+
+
+
 "block.spacebees.beehive_luna": "Lunar Hive",
 "item.spacebees.bee_comb_barren": "Barren Comb",
 "item.spacebees.bee_comb_water": "Water Comb",
