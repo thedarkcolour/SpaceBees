@@ -2,8 +2,6 @@ package com.example.spacebees.bees;
 
 import java.awt.Color;
 
-import org.antlr.v4.parse.ANTLRParser.blockEntry_return;
-
 import com.example.spacebees.combs.SBEnumHoneyComb;
 import com.example.spacebees.combs.SpaceBeesApicultureItems;
 
@@ -88,7 +86,7 @@ public class CustomBeeSpecies {
 				.setAuthority("Binnie");
 		
 				
-		//import starts here
+		//From ExtraBees, Work In Progress TODO: add correct allels 
 
 		apiculture.registerSpecies(SpaceBeesSpecies.BARREN, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_BARREN, true, new Color(0xe0d263))
 		.setBody(new Color(0xcbe374))

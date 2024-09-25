@@ -33,7 +33,6 @@ import forestry.api.apiculture.genetics.IBee;
 import forestry.api.apiculture.hives.IHiveDrop;
 import forestry.api.apiculture.hives.IHiveTile;
 import forestry.apiculture.MaterialBeehive;
-import forestry.apiculture.features.ApicultureTiles;
 import forestry.apiculture.tiles.TileHive;
 import forestry.core.tiles.TileUtil;
 
@@ -59,7 +58,7 @@ public class BlockSpaceBeeHive extends Block implements EntityBlock {
 	@Nullable
 	@Override
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> actualType) {
-		return actualType != ApicultureTiles.HIVE.tileType() ? null : (level1, pos, state1, t) -> ((TileHive) t).tick(level1);
+		return actualType != SpaceBeesApicultureTiles.HIVE.tileType() ? null : (level1, pos, state1, t) -> ((TileHive) t).tick(level1);
 	}
 
 	@Override

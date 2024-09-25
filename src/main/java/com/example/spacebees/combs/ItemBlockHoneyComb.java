@@ -7,7 +7,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.data.loading.DatagenModLoader;
 
 import forestry.api.core.ItemGroups;
-import com.example.spacebees.combs.BlockHoneyComb;
 import forestry.core.items.ItemBlockForestry;
 import forestry.core.items.definitions.IColoredItem;
 

@@ -10,7 +10,6 @@ import forestry.apiculture.FlowerType;
 import forestry.apiculture.features.ApicultureItems;
 import forestry.apiculture.genetics.effects.PotionBeeEffect;
 import forestry.apiculture.items.EnumHoneyComb;
-import forestry.api.apiculture.ForestryBeeEffects;
 import forestry.api.apiculture.ForestryBeeSpecies;
 import forestry.api.plugin.IApicultureRegistration;
 import net.minecraft.resources.ResourceLocation;
