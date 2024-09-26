@@ -88,7 +88,7 @@ public class BlockSpaceBeeHive extends Block implements EntityBlock {
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 		BlockPos pos = new BlockPos(builder.getParameter(LootContextParams.ORIGIN));
 		ItemStack tool = builder.getParameter(LootContextParams.TOOL);
-
+	
 		if (tool.is(ForestryTags.Items.SCOOPS)) {
 			int fortune = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.BLOCK_FORTUNE, tool);
 			return getDrops(builder.getLevel(), pos, fortune);

@@ -52,7 +52,6 @@ public class SpaceBees
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
        
        
-       // Bee Stuff
         
     }
 
