@@ -32,13 +32,13 @@ public class CustomBees implements IForestryPlugin{
 	}
     
     Supplier<List<ItemStack>> honeyComb = getHoneyComb(EnumHoneyComb.HONEY);
-    Supplier<List<ItemStack>> barrenComb = getSBHoneyComb(SBEnumHoneyComb.BARREN);
+    Supplier<List<ItemStack>> SBhoneyComb = getSBHoneyComb(SBEnumHoneyComb.BARREN);
 
     @Override 
     public void registerApiculture(@SuppressWarnings("null") IApicultureRegistration apiculture){
         CustomBeeSpecies.register(apiculture);
         		apiculture.registerHive(SpaceBeesSpecies.LUNA, SpaceBeesHiveDefinition.LUNA)
-               	    .addDrop(0.80, SpaceBeesSpecies.LUNA, barrenComb, 0.7f)
+               	    .addDrop(0.80, SpaceBeesSpecies.LUNA, SBhoneyComb, 0.7f)
                     .addDrop(0.03, ForestryBeeSpecies.VALIANT, honeyComb);
                 
                 apiculture.registerFlowerType(SpaceBeesFlowerType.WATER, new FlowerType(SpaceBeesTags.Blocks.WATER_FLOWERS, true));
