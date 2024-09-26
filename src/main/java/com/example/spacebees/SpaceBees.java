@@ -32,16 +32,6 @@ public class SpaceBees
     // Create a Deferred Register to hold Items which will all be registered under the "SpaceBees" namespace
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
-    // Creates a new Block with the id "SpaceBees:example_block", combining the namespace and path
-    //public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
-    // Creates a new BlockItem with the id "SpaceBees:example_block", combining the namespace and path
-    //public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-
-    //public static final RegistryObject<Block> LUNAR_HIVE = BLOCKS.register("lunar_hive", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
-    //public static final RegistryObject<Item> LUNAR_HIVE_ITEM = ITEMS.register("lunar_hive", () -> new BlockItem(LUNAR_HIVE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-    
-    //hive shit
-  
 
     public SpaceBees()
     {
