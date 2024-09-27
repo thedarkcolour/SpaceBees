@@ -5,8 +5,12 @@ import net.minecraft.resources.ResourceLocation;
 
 
 public enum SpaceBeesBlockHiveType implements IBlockSubtype {
-	LUNA(SpaceBeesSpecies.LUNA);
-
+	LUNA(SpaceBeesSpecies.LUNA),
+	WATER(SpaceBeesSpecies.WATER),
+	ROCK(SpaceBeesSpecies.ROCK),
+	NETHER(SpaceBeesSpecies.EMBITTERED),
+	MARBLE(SpaceBeesSpecies.MARBLE);
+	
 	public static final SpaceBeesBlockHiveType[] VALUES = values();
 
 	private final ResourceLocation speciesUid;

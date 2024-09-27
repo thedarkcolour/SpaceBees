@@ -139,6 +139,10 @@
 
 
 "block.spacebees.beehive_luna": "Lunar Hive",
+"block.spacebees.beehive_nether": "Nether Hive",
+"block.spacebees.beehive_water": "Water Hive",
+"block.spacebees.beehive_rock": "Rock Hive",
+"block.spacebees.beehive_marble": "Marble Hive",
 "item.spacebees.bee_comb_barren": "Barren Comb",
 "item.spacebees.bee_comb_water": "Water Comb",
 "block.spacebees.block_bee_comb_barren": "Barren Comb Block"

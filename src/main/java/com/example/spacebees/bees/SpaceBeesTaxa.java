@@ -75,7 +75,7 @@ public class SpaceBeesTaxa {
     public static final String SPECIES_ROMAN = "Roman";
     public static final String SPECIES_GREEK = "Greek";
     public static final String SPECIES_CLASSICAL = "Classical";
-    public static final String SPECIES_BASALT = "Basalt";
+    public static final String SPECIES_EMBITTERED = "Embittered";
     public static final String SPECIES_TEMPERED = "Tempered";
     public static final String SPECIES_VOLCANIC = "Volcanic";
     public static final String SPECIES_GLOWSTONE = "Glowstone";

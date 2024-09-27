@@ -35,7 +35,55 @@ public enum SpaceBeesHiveDefinition implements IHiveDefinition{
 
 		@Override
 		public boolean isGoodBiome(Holder<Biome> biome) {
-			//TODO: Forest bees now have slight cold tolerance. This tag restricts them to the warmer side. Should they require deciduous trees? investigate its not excluding the wrong biomes
+			//TODO: Add Correct Spawning
+			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
+		}
+	},
+	WATER(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.WATER).defaultState(), 6.0f, SpaceBeesSpecies.WATER, new HiveGenGround(Blocks.GRASS_BLOCK)) {
+		@Override
+		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
+			postGenFlowers(world, rand, pos, flowerStates);
+		}
+
+		@Override
+		public boolean isGoodBiome(Holder<Biome> biome) {
+			//TODO: Add Correct Spawning
+			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
+		}
+	},
+	ROCK(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.ROCK).defaultState(), 6.0f, SpaceBeesSpecies.ROCK, new HiveGenGround(Blocks.GRASS_BLOCK)) {
+		@Override
+		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
+			postGenFlowers(world, rand, pos, flowerStates);
+		}
+
+		@Override
+		public boolean isGoodBiome(Holder<Biome> biome) {
+			//TODO: Add Correct Spawning
+			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
+		}
+	},
+	MARBLE(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.MARBLE).defaultState(), 6.0f, SpaceBeesSpecies.MARBLE, new HiveGenGround(Blocks.GRASS_BLOCK)) {
+		@Override
+		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
+			postGenFlowers(world, rand, pos, flowerStates);
+		}
+
+		@Override
+		public boolean isGoodBiome(Holder<Biome> biome) {
+			//TODO: Add Correct Spawning
+			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
+		}
+	},
+	NETHER(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.NETHER).defaultState(), 6.0f, SpaceBeesSpecies.EMBITTERED, new HiveGenGround(Blocks.GRASS_BLOCK)) {
+		@Override
+		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
+			postGenFlowers(world, rand, pos, flowerStates);
+		}
+
+		@Override
+		public boolean isGoodBiome(Holder<Biome> biome) {
+			//TODO: Add Correct Spawning
 			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
 		}
 	};

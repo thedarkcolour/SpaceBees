@@ -317,7 +317,7 @@ public class CustomBeeSpecies {
 		.setBody(new Color(0xffdc16))
 		.setGlint(true)
 		.setAuthority("Binnie");
-		apiculture.registerSpecies(SpaceBeesSpecies.BASALT, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_BASALT, true, new Color(0x8c6969))
+		apiculture.registerSpecies(SpaceBeesSpecies.EMBITTERED, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_EMBITTERED, true, new Color(0x8c6969))
 		.setBody(new Color(0x9a2323))
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.TEMPERED, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_TEMPERED, true, new Color(0x8a4848))

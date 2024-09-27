@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "particle": "spacebees:block/water.0",
+        "down": "spacebees:block/water.1",
+        "up": "spacebees:block/water.1",
+        "north": "spacebees:block/water.0",
+        "east": "spacebees:block/water.0",
+        "south": "spacebees:block/water.0",
+        "west": "spacebees:block/water.0"
+    }
+}

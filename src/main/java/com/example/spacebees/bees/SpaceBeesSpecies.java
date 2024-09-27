@@ -79,7 +79,7 @@ public class SpaceBeesSpecies {
     public static final ResourceLocation ROMAN = forestry("bee_roman");
     public static final ResourceLocation GREEK = forestry("bee_greek");
     public static final ResourceLocation CLASSICAL = forestry("bee_classical");
-    public static final ResourceLocation BASALT = forestry("bee_basalt");
+    public static final ResourceLocation EMBITTERED = forestry("bee_embittered");
     public static final ResourceLocation TEMPERED = forestry("bee_tempered");
     public static final ResourceLocation VOLCANIC = forestry("bee_volcanic");
     public static final ResourceLocation GLOWSTONE = forestry("bee_glowstone");

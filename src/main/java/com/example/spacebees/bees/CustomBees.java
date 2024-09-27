@@ -40,7 +40,18 @@ public class CustomBees implements IForestryPlugin{
         		apiculture.registerHive(SpaceBeesSpecies.LUNA, SpaceBeesHiveDefinition.LUNA)
                	    .addDrop(0.80, SpaceBeesSpecies.LUNA, SBhoneyComb, 0.7f)
                     .addDrop(0.03, ForestryBeeSpecies.VALIANT, honeyComb);
-                
+                apiculture.registerHive(SpaceBeesSpecies.ROCK, SpaceBeesHiveDefinition.ROCK)
+                    .addDrop(0.80, SpaceBeesSpecies.ROCK, SBhoneyComb, 0.7f)
+                    .addDrop(0.03, ForestryBeeSpecies.VALIANT, honeyComb);
+                apiculture.registerHive(SpaceBeesSpecies.WATER, SpaceBeesHiveDefinition.WATER)
+                    .addDrop(0.80, SpaceBeesSpecies.WATER, SBhoneyComb, 0.7f)
+                    .addDrop(0.03, ForestryBeeSpecies.VALIANT, honeyComb);
+                apiculture.registerHive(SpaceBeesSpecies.MARBLE, SpaceBeesHiveDefinition.MARBLE)
+                    .addDrop(0.80, SpaceBeesSpecies.MARBLE, SBhoneyComb, 0.7f)
+                    .addDrop(0.03, ForestryBeeSpecies.VALIANT, honeyComb);       
+                apiculture.registerHive(SpaceBeesSpecies.EMBITTERED, SpaceBeesHiveDefinition.NETHER)
+                    .addDrop(0.80, SpaceBeesSpecies.EMBITTERED, SBhoneyComb, 0.7f)
+                    .addDrop(0.03, ForestryBeeSpecies.VALIANT, honeyComb);           
                 apiculture.registerFlowerType(SpaceBeesFlowerType.WATER, new FlowerType(SpaceBeesTags.Blocks.WATER_FLOWERS, true));
                 apiculture.registerFlowerType(SpaceBeesFlowerType.SUGAR, new FlowerType(SpaceBeesTags.Blocks.SUGAR_FLOWERS, true));
                 apiculture.registerFlowerType(SpaceBeesFlowerType.ROCK, new FlowerType(SpaceBeesTags.Blocks.ROCK_FLOWERS, true));
