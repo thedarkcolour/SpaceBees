@@ -2,6 +2,9 @@ package com.example.spacebees.bees;
 
 import java.util.List;
 
+import com.example.spacebees.bees.genetics.hives.HiveGenNether;
+import com.example.spacebees.bees.genetics.hives.HiveGenWater;
+
 import forestry.api.apiculture.genetics.IBeeSpecies;
 import forestry.api.apiculture.hives.IHiveDefinition;
 import forestry.api.apiculture.hives.IHiveGen;
@@ -11,6 +14,7 @@ import forestry.api.core.ToleranceType;
 import forestry.api.genetics.ClimateHelper;
 import forestry.api.genetics.alleles.BeeChromosomes;
 import forestry.apiculture.hives.HiveGenGround;
+import forestry.apiculture.hives.HiveGenTree;
 import forestry.core.utils.SpeciesUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -27,7 +31,7 @@ import java.util.ArrayList;
 
 
 public enum SpaceBeesHiveDefinition implements IHiveDefinition{
-	LUNA(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.LUNA).defaultState(), 6.0f, SpaceBeesSpecies.LUNA, new HiveGenGround(Blocks.GRASS_BLOCK)) {
+	LUNA(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.LUNA).defaultState(), 0f, SpaceBeesSpecies.LUNA, new HiveGenGround(Blocks.GRASS_BLOCK)) {
 		@Override
 		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
 			postGenFlowers(world, rand, pos, flowerStates);
@@ -39,7 +43,19 @@ public enum SpaceBeesHiveDefinition implements IHiveDefinition{
 			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
 		}
 	},
-	WATER(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.WATER).defaultState(), 6.0f, SpaceBeesSpecies.WATER, new HiveGenGround(Blocks.GRASS_BLOCK)) {
+	WATER(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.WATER).defaultState(), 6000f, SpaceBeesSpecies.WATER, new HiveGenWater(Blocks.CLAY, Blocks.SAND, Blocks.GRAVEL)) {
+		@Override
+		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
+			postGenFlowers(world, rand, pos, flowerStates);
+		}
+
+		@Override
+		public boolean isGoodBiome(Holder<Biome> biome) {
+			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
+			//change this to river, ocean, warm_ocean etcetcetc
+		}
+	},
+	ROCK(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.ROCK).defaultState(), 0f, SpaceBeesSpecies.ROCK, new HiveGenGround(Blocks.GRASS_BLOCK)) {
 		@Override
 		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
 			postGenFlowers(world, rand, pos, flowerStates);
@@ -51,7 +67,7 @@ public enum SpaceBeesHiveDefinition implements IHiveDefinition{
 			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
 		}
 	},
-	ROCK(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.ROCK).defaultState(), 6.0f, SpaceBeesSpecies.ROCK, new HiveGenGround(Blocks.GRASS_BLOCK)) {
+	MARBLE(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.MARBLE).defaultState(), 0f, SpaceBeesSpecies.MARBLE, new HiveGenGround(Blocks.GRASS_BLOCK)) {
 		@Override
 		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
 			postGenFlowers(world, rand, pos, flowerStates);
@@ -63,28 +79,11 @@ public enum SpaceBeesHiveDefinition implements IHiveDefinition{
 			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
 		}
 	},
-	MARBLE(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.MARBLE).defaultState(), 6.0f, SpaceBeesSpecies.MARBLE, new HiveGenGround(Blocks.GRASS_BLOCK)) {
-		@Override
-		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
-			postGenFlowers(world, rand, pos, flowerStates);
-		}
-
+	NETHER(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.NETHER).defaultState(), 6000f, SpaceBeesSpecies.EMBITTERED, new HiveGenNether(Blocks.BASALT, Blocks.NETHERRACK, Blocks.WARPED_NYLIUM, Blocks.CRIMSON_NYLIUM, Blocks.SOUL_SAND, Blocks.SOUL_SOIL)) {
 		@Override
 		public boolean isGoodBiome(Holder<Biome> biome) {
-			//TODO: Add Correct Spawning
-			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
-		}
-	},
-	NETHER(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.NETHER).defaultState(), 6.0f, SpaceBeesSpecies.EMBITTERED, new HiveGenGround(Blocks.GRASS_BLOCK)) {
-		@Override
-		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
-			postGenFlowers(world, rand, pos, flowerStates);
-		}
-
-		@Override
-		public boolean isGoodBiome(Holder<Biome> biome) {
-			//TODO: Add Correct Spawning
-			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
+			//TODO: Add Correct Spawning, this doesn't work as intended
+			return biome.is(BiomeTags.IS_NETHER);
 		}
 	};
 	

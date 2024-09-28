@@ -319,6 +319,18 @@ public class CustomBeeSpecies {
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.EMBITTERED, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_EMBITTERED, true, new Color(0x8c6969))
 		.setBody(new Color(0x9a2323))
+		.setTemperature(TemperatureType.HELLISH)
+		.setHumidity(HumidityType.ARID)
+		.addProduct(SpaceBeesApicultureItems.BEE_COMBS.stack(SBEnumHoneyComb.BARREN), 0.30f)
+		.setGenome(genome -> {
+			genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWER);
+			genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
+			genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_2);
+			genome.set(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_NONE);
+			genome.set(BeeChromosomes.FLOWER_TYPE, SpaceBeeAlleles.FLOWER_TYPE_DEAD);
+	
+			
+	})		
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.TEMPERED, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_TEMPERED, true, new Color(0x8a4848))
 		.setBody(new Color(0x9a2323))

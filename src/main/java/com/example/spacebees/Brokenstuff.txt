@@ -3,4 +3,3 @@ Broken Stuff
 Custom hives dont tick, known issue related to tile entity, known issue
 texture on custom block_bee_combs broken, its using the default texture
 colors on combs are wrong too, registration issue?
-All beehives flamable, this isnt correct for nether hives

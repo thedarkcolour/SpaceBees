@@ -158,7 +158,11 @@ public class BlockSpaceBeeHive extends Block implements EntityBlock {
 
 	@Override
 	public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+		if (this.speciesId == SpaceBeesSpecies.EMBITTERED){
+			return false;
+		} else {
 		return true;
+		}
 	}
 
 	@Override
