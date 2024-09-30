@@ -25,6 +25,7 @@ public class SpaceBeeAlleles {
 
     public static final IRegistryAllele<IBeeEffect> EFFECT_LUNAR = REGISTRY.registryAllele(SpaceBeeEffects.LUNAR, BeeChromosomes.EFFECT);
     public static final IRegistryAllele<IBeeEffect> EFFECT_LUNACY = REGISTRY.registryAllele(SpaceBeeEffects.LUNACY, BeeChromosomes.EFFECT);
+    public static final IRegistryAllele<IBeeEffect> EFFECT_METEOR = REGISTRY.registryAllele(SpaceBeeEffects.METEOR, BeeChromosomes.EFFECT);
 
 
 

@@ -5,15 +5,22 @@ import java.awt.Color;
 import com.example.spacebees.combs.SBEnumHoneyComb;
 import com.example.spacebees.combs.SpaceBeesApicultureItems;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+
 import forestry.api.genetics.alleles.BeeChromosomes;
 import forestry.api.genetics.alleles.ForestryAlleles;
 import forestry.api.plugin.IApicultureRegistration;
 import forestry.apiculture.items.EnumHoneyComb;
+import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.item.Items;
 import forestry.api.apiculture.ForestryBeeSpecies;
 import forestry.api.core.HumidityType;
 import forestry.api.core.TemperatureType;
 import forestry.api.genetics.ForestryTaxa;
-
+import forestry.apiculture.features.ApicultureItems;
 
 //  See DefaultBeeSpecies for examples
 //  https://github.com/thedarkcolour/ForestryMC/blob/dev/1.19.x/src/main/java/forestry/plugin/DefaultBeeSpecies.java
@@ -24,7 +31,7 @@ public class CustomBeeSpecies {
 		// apiculture.registerSpecies(resource location, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_XXX, true?, new Color(0xa3999c))
 		// Lunar
 		apiculture.registerSpecies(SpaceBeesSpecies.LUNA, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_LUNA, true, new Color(0xa3999c))
-				.addProduct(forestry.apiculture.features.ApicultureItems.BEE_COMBS.stack(EnumHoneyComb.PARCHED), 0.20f)
+				.addProduct(ApicultureItems.BEE_COMBS.stack(EnumHoneyComb.PARCHED), 0.20f)
 				.addProduct(SpaceBeesApicultureItems.BEE_COMBS.stack(SBEnumHoneyComb.BARREN), 0.45f)
 				.setGenome(genome -> {
 					genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWER);
@@ -317,31 +324,101 @@ public class CustomBeeSpecies {
 		.setBody(new Color(0xffdc16))
 		.setGlint(true)
 		.setAuthority("Binnie");
+		
+		//Volcanic Branch
 		apiculture.registerSpecies(SpaceBeesSpecies.EMBITTERED, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_EMBITTERED, true, new Color(0x8c6969))
 		.setBody(new Color(0x9a2323))
 		.setTemperature(TemperatureType.HELLISH)
 		.setHumidity(HumidityType.ARID)
-		.addProduct(SpaceBeesApicultureItems.BEE_COMBS.stack(SBEnumHoneyComb.BARREN), 0.30f)
+		.addProduct(ApicultureItems.BEE_COMBS.stack(EnumHoneyComb.SIMMERING), 0.25f)
+		.setNocturnal(true)
 		.setGenome(genome -> {
 			genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWER);
 			genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
 			genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_2);
 			genome.set(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_NONE);
-			genome.set(BeeChromosomes.FLOWER_TYPE, SpaceBeeAlleles.FLOWER_TYPE_DEAD);
-	
-			
-	})		
+			genome.set(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_NETHER);
+			genome.set(BeeChromosomes.EFFECT, ForestryAlleles.EFFECT_AGGRESSIVE);
+			genome.set(BeeChromosomes.NEVER_SLEEPS, true);
+			genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWER);
+			genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_NORMAL);
+
+
+		})		
 		.setAuthority("Binnie");
+
 		apiculture.registerSpecies(SpaceBeesSpecies.TEMPERED, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_TEMPERED, true, new Color(0x8a4848))
 		.setBody(new Color(0x9a2323))
+		.setTemperature(TemperatureType.HELLISH)
+		.setHumidity(HumidityType.ARID)
+		.addProduct(ApicultureItems.BEE_COMBS.stack(EnumHoneyComb.SIMMERING), 0.25f)
+		.setNocturnal(true)
+		.setGenome(genome -> {
+			genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_AVERAGE);
+			genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
+			genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_2);
+			genome.set(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_NONE);
+			genome.set(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_NETHER);
+			genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_METEOR);
+			genome.set(BeeChromosomes.NEVER_SLEEPS, true);
+			genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWER);
+			genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_NORMAL);
+
+		})
+		.addMutations(mutations -> {
+			mutations.add(SpaceBeesSpecies.EMBITTERED, ForestryBeeSpecies.FIENDISH, 30)
+			.restrictBiomeType(BiomeTags.IS_NETHER);
+		})	
 		.setAuthority("Binnie");
+
 		apiculture.registerSpecies(SpaceBeesSpecies.VOLCANIC, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_VOLCANIC, true, new Color(0x4d0c0c))
 		.setBody(new Color(0x9a2323))
-		.setGlint(true)
-		.setAuthority("Binnie");
+				.addProduct(ApicultureItems.BEE_COMBS.stack(EnumHoneyComb.SIMMERING), 0.25f)
+				.addProduct(new ItemStack(Items.BLAZE_POWDER), 0.10f)
+				.setTemperature(TemperatureType.HELLISH)
+				.setHumidity(HumidityType.ARID)
+				.setNocturnal(true)
+				.setGenome(genome -> {
+					genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_AVERAGE);
+					genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
+					genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_2);
+					genome.set(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_NONE);
+					genome.set(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_NETHER);
+					genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_METEOR);
+					genome.set(BeeChromosomes.NEVER_SLEEPS, true);
+					genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWER);
+					genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_NORMAL);
+
+				})
+				.addMutations(mutations -> {
+					mutations.add(SpaceBeesSpecies.TEMPERED, ForestryBeeSpecies.DEMONIC, 20)
+					.restrictBiomeType(BiomeTags.IS_NETHER);
+				})	
+			.setGlint(true)
+			.setAuthority("Binnie");
+
+
 		apiculture.registerSpecies(SpaceBeesSpecies.GLOWSTONE, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_GLOWSTONE, true, new Color(0xe0c61b))
 		.setBody(new Color(0x9a2323))
+//		.addProduct(ApicultureItems.BEE_COMBS.stack(EnumHoneyComb.SIMMERING), 0.25f) //glowstone comb
+		.setTemperature(TemperatureType.HELLISH)
+		.setHumidity(HumidityType.ARID)
+		.setNocturnal(true)
+		.setGenome(genome -> {
+			genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_AVERAGE);
+			genome.set(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_2);
+			genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_2);
+			genome.set(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_NONE);
+			genome.set(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_NETHER);
+			genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_METEOR);
+			genome.set(BeeChromosomes.NEVER_SLEEPS, true);
+			genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOW);
+		})
+		.addMutations(mutations -> {
+			mutations.add(SpaceBeesSpecies.TEMPERED, SpaceBeesSpecies.EXCITED, 5);
+		})	
 		.setAuthority("Binnie");
+
 		apiculture.registerSpecies(SpaceBeesSpecies.MALICIOUS, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_MALICIOUS, true, new Color(0x782a77))
 		.setBody(new Color(0x069764))
 		.setAuthority("Binnie");

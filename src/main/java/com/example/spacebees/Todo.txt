@@ -5,12 +5,13 @@ Properly include dependencies
 Fix Taxa
 add correct stats to extrabees bees
 Properly credit people from forestry/extrabees etc
+
 ---Featueres---
 
 make an Alveary block
-Implement a bee effect (custom effect for lunar bees that combines high jump and slow fall)
-Implement an allele
-Implement a flower
+
+
+
 
 
 ---extrabees import---

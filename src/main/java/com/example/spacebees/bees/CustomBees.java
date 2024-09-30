@@ -66,6 +66,7 @@ public class CustomBees implements IForestryPlugin{
 
                 apiculture.registerBeeEffect(SpaceBeeEffects.LUNAR, new PotionBeeEffect(false, MobEffects.SLOW_FALLING, 1000));
                 apiculture.registerBeeEffect(SpaceBeeEffects.LUNACY, new PotionBeeEffect(false, MobEffects.JUMP, 1000));
+                apiculture.registerBeeEffect(SpaceBeeEffects.METEOR, new MeteorEffect());
 
 
 
