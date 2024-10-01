@@ -62,6 +62,8 @@ public class CustomBeeSpecies {
 				.setStripes(new Color(0x9e7b3a))
 				.setGenome(genome -> {
 					genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_NONE);
+					genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_BOSS);
+
 				})		
 				.addMutations(mutations -> {
 					mutations.add(SpaceBeesSpecies.LUNA, ForestryBeeSpecies.INDUSTRIOUS, 10);
@@ -110,12 +112,23 @@ public class CustomBeeSpecies {
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.ROTTEN, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_ROTTEN, true, new Color(0xbfe0b6))
 		.setBody(new Color(0xcbe374))
+		.setGenome(genome -> {
+		genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_SPAWN_ZOMBIE);
+		})
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.BONE, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_BONE, true, new Color(0xe9ede8))
 		.setBody(new Color(0xcbe374))
+		.setGenome(genome -> {
+			genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_SPAWN_SKELETON);
+		})		
+
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.CREEPER, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_CREEPER, true, new Color(0x2ce615))
 		.setBody(new Color(0xcbe374))
+		.setGenome(genome -> {
+			genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_SPAWN_CREEPER);
+
+		})		
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.ROCK, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_ROCK, true, new Color(0xa8a8a8))
 		.setBody(new Color(0x999999))
@@ -258,6 +271,8 @@ public class CustomBeeSpecies {
 			genome.set(BeeChromosomes.TOLERATES_RAIN, true);
 			genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWEST);
 			genome.set(BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_BOTH_1);
+			genome.set(BeeChromosomes.POLLINATION, ForestryAlleles.POLLINATION_SLOWEST);
+			//^ this the the Aqua branch profile
 
 		})
 		.setAuthority("Binnie");
@@ -444,6 +459,9 @@ public class CustomBeeSpecies {
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.CAUSTIC, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_CAUSTIC, true, new Color(0x84a11d))
 		.setBody(new Color(0x069764))
+		.setGenome(genome -> {
+			genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_ACID);
+			})
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.ACIDIC, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_ACIDIC, true, new Color(0xc0f016))
 		.setBody(new Color(0x069764))
@@ -454,6 +472,9 @@ public class CustomBeeSpecies {
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.ENERGETIC, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_ENERGETIC, true, new Color(0xe835c7))
 		.setBody(new Color(0xffdc16))
+		.setGenome(genome -> {
+		genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_LIGHTNING);
+		})
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.ECSTATIC, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_ECSTATIC, true, new Color(0xaf35e8))
 		.setBody(new Color(0xffdc16))

@@ -8,21 +8,26 @@ import forestry.core.utils.VecUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 
+import java.util.List;
+
+
 import java.util.Random;
-import org.slf4j.Logger;
-import com.mojang.logging.LogUtils;
+
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
-public class MeteorEffect extends ThrottledBeeEffect {
-    private static final Logger LOGGER = LogUtils.getLogger();
+public class BossEffect extends ThrottledBeeEffect {
     private Random r = new Random ();
-    public MeteorEffect() {
-        super(false, 100, true, false);
+    public BossEffect() {
+        super(false, 500, true, false);
     }
     @SuppressWarnings("null")
     @Override
     public IEffectData doEffectThrottled(IGenome genome, IEffectData storedData, IBeeHousing housing) {
+		List<LivingEntity> entities = ThrottledBeeEffect.getEntitiesInRange(genome, housing, LivingEntity.class);
+
         Level level = housing.getWorldObj();
         BlockPos housingCoords = housing.getCoordinates();
 		Vec3i area = VecUtil.scale(genome.getActiveValue(BeeChromosomes.TERRITORY), 2);
@@ -34,9 +39,14 @@ public class MeteorEffect extends ThrottledBeeEffect {
             int zOffset = r.nextInt(range-0) - radius;
             double actualDistance = Math.sqrt(xOffset * xOffset + zOffset * zOffset);
             if (actualDistance <= radius) {
-                SmallFireball smallFireball = new SmallFireball(level, housingCoords.getX() + xOffset, housingCoords.getY() + timingOffset, housingCoords.getZ() + zOffset, 0, -0.6, 0);
-                level.addFreshEntity(smallFireball);
-                //LOGGER.info("Spawning Fireball!");
+                for (LivingEntity entity : entities){
+                    Vec3 entityPos = entity.position();
+                    //like meteor but targets the player
+                    //TODO add vector math to make this shoot from the housing to the player directly like a ghast
+                    SmallFireball smallFireball = new SmallFireball(level, entityPos.x, entityPos.y + timingOffset, entityPos.z, 0, -0.6, 0);
+                    level.addFreshEntity(smallFireball);
+                
+                }
             }
             return storedData;
         }

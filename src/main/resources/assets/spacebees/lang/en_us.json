@@ -135,8 +135,9 @@
 
 "allele.forestry.bee_effect.spacebees.bee_effect_lunar": "Lunar Fall",
 "allele.forestry.bee_effect.spacebees.bee_effect_lunacy": "Lunar Jump",
-
-
+"allele.forestry.bee_effect.spacebees.bee_effect_creeper": "Creeper",
+"allele.forestry.bee_effect.spacebees.bee_effect_zombie": "Zombie",
+"allele.forestry.bee_effect.spacebees.bee_effect_skeleton": "Spooky Scary",
 
 "block.spacebees.beehive_luna": "Lunar Hive",
 "block.spacebees.beehive_nether": "Nether Hive",

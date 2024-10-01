@@ -26,6 +26,16 @@ public class SpaceBeeAlleles {
     public static final IRegistryAllele<IBeeEffect> EFFECT_LUNAR = REGISTRY.registryAllele(SpaceBeeEffects.LUNAR, BeeChromosomes.EFFECT);
     public static final IRegistryAllele<IBeeEffect> EFFECT_LUNACY = REGISTRY.registryAllele(SpaceBeeEffects.LUNACY, BeeChromosomes.EFFECT);
     public static final IRegistryAllele<IBeeEffect> EFFECT_METEOR = REGISTRY.registryAllele(SpaceBeeEffects.METEOR, BeeChromosomes.EFFECT);
+    public static final IRegistryAllele<IBeeEffect> EFFECT_SPAWN_ZOMBIE = REGISTRY.registryAllele(SpaceBeeEffects.SPAWN_ZOMBIE, BeeChromosomes.EFFECT);
+    public static final IRegistryAllele<IBeeEffect> EFFECT_SPAWN_SKELETON = REGISTRY.registryAllele(SpaceBeeEffects.SPAWN_SKELETON, BeeChromosomes.EFFECT);
+    public static final IRegistryAllele<IBeeEffect> EFFECT_SPAWN_CREEPER = REGISTRY.registryAllele(SpaceBeeEffects.SPAWN_CREEPER, BeeChromosomes.EFFECT);
+    public static final IRegistryAllele<IBeeEffect> EFFECT_LIGHTNING = REGISTRY.registryAllele(SpaceBeeEffects.LIGHTNING, BeeChromosomes.EFFECT);
+    public static final IRegistryAllele<IBeeEffect> EFFECT_ACID = REGISTRY.registryAllele(SpaceBeeEffects.ACID, BeeChromosomes.EFFECT);
+    public static final IRegistryAllele<IBeeEffect> EFFECT_BOSS = REGISTRY.registryAllele(SpaceBeeEffects.BOSS, BeeChromosomes.EFFECT);
+
+
+
+
 
 
 
