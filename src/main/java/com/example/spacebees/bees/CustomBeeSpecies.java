@@ -94,14 +94,26 @@ public class CustomBeeSpecies {
 				
 				.setAuthority("Binnie");
 		
-				
-		//From ExtraBees, Work In Progress TODO: add correct allels 
+		apiculture.registerSpecies(SpaceBeesSpecies.NOURISHING, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_NOURISHING, true, new Color(0xFFC72C))
+				.setBody(new Color(0xDA291C))
+				.setStripes(new Color(0xFFC72C))
+				.setGenome(genome -> {
+					genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_FOOD);
+				})
+
+				.setAuthority("PantyRush");		
+		
+				//From ExtraBees, Work In Progress TODO: add correct allels 
 
 		apiculture.registerSpecies(SpaceBeesSpecies.BARREN, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_BARREN, true, new Color(0xe0d263))
 		.setBody(new Color(0xcbe374))
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.DESOLATE, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_DESOLATE, true, new Color(0xd1b890))
 		.setBody(new Color(0xcbe374))
+		.setGenome(genome -> {
+			genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_HUNGER);
+
+		})		
 		.setGlint(true)
 		.setAuthority("Binnie");
 		apiculture.registerSpecies(SpaceBeesSpecies.DECOMPOSING, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_DECOMPOSING, true, new Color(0x523711))

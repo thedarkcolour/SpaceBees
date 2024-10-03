@@ -138,6 +138,8 @@
 "allele.forestry.bee_effect.spacebees.bee_effect_creeper": "Creeper",
 "allele.forestry.bee_effect.spacebees.bee_effect_zombie": "Zombie",
 "allele.forestry.bee_effect.spacebees.bee_effect_skeleton": "Spooky Scary",
+"allele.forestry.bee_effect.spacebees.bee_effect_hunger": "Hungry",
+
 
 "block.spacebees.beehive_luna": "Lunar Hive",
 "block.spacebees.beehive_nether": "Nether Hive",
@@ -146,5 +148,10 @@
 "block.spacebees.beehive_marble": "Marble Hive",
 "item.spacebees.bee_comb_barren": "Barren Comb",
 "item.spacebees.bee_comb_water": "Water Comb",
-"block.spacebees.block_bee_comb_barren": "Barren Comb Block"
+"block.spacebees.block_bee_comb_barren": "Barren Comb Block",
+"block.spacebees.alveary_tooltip": "Multi-Block: 3x3x3 with 3x1x3 wood slabs on the top",
+"block.spacebees.alveary_lighting": "Alveary Lighting",
+"block.spacebees.alveary_rainshield": "Rain Shield"
+
+
 }

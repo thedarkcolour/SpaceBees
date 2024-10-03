@@ -32,6 +32,10 @@ public class SpaceBeeAlleles {
     public static final IRegistryAllele<IBeeEffect> EFFECT_LIGHTNING = REGISTRY.registryAllele(SpaceBeeEffects.LIGHTNING, BeeChromosomes.EFFECT);
     public static final IRegistryAllele<IBeeEffect> EFFECT_ACID = REGISTRY.registryAllele(SpaceBeeEffects.ACID, BeeChromosomes.EFFECT);
     public static final IRegistryAllele<IBeeEffect> EFFECT_BOSS = REGISTRY.registryAllele(SpaceBeeEffects.BOSS, BeeChromosomes.EFFECT);
+    public static final IRegistryAllele<IBeeEffect> EFFECT_HUNGER = REGISTRY.registryAllele(SpaceBeeEffects.HUNGER, BeeChromosomes.EFFECT);
+    public static final IRegistryAllele<IBeeEffect> EFFECT_FOOD = REGISTRY.registryAllele(SpaceBeeEffects.FOOD, BeeChromosomes.EFFECT);
+
+
 
 
 

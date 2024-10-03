@@ -15,6 +15,9 @@ public class SpaceBeeEffects {
         public static final ResourceLocation LIGHTNING= SpaceBeesConstants.spacebees("bee_effect_lightning");
         public static final ResourceLocation ACID= SpaceBeesConstants.spacebees("bee_effect_acid");
         public static final ResourceLocation BOSS= SpaceBeesConstants.spacebees("bee_effect_boss");
+        public static final ResourceLocation HUNGER= SpaceBeesConstants.spacebees("bee_effect_hunger");
+        public static final ResourceLocation FOOD= SpaceBeesConstants.spacebees("bee_effect_food");
+
 
 
 

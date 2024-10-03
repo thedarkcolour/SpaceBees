@@ -4,6 +4,8 @@ public class SpaceBeesTaxa {
     public static final String SPECIES_LUNA = "Luna";
     public static final String SPECIES_LUNATIC = "Lunatic";
     public static final String SPECIES_SMEDLEY = "Smedley";
+    public static final String SPECIES_NOURISHING = "Nourishing";
+
     public static final String SPECIES_ARID = "Arid";
     public static final String SPECIES_BARREN = "Barren";
     public static final String SPECIES_DESOLATE = "Desolate";

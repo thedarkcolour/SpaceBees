@@ -5,7 +5,6 @@ import forestry.api.genetics.IEffectData;
 import forestry.api.genetics.IGenome;
 import forestry.api.genetics.alleles.BeeChromosomes;
 import forestry.core.utils.VecUtil;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 
 import java.util.List;
@@ -29,7 +28,6 @@ public class BossEffect extends ThrottledBeeEffect {
 		List<LivingEntity> entities = ThrottledBeeEffect.getEntitiesInRange(genome, housing, LivingEntity.class);
 
         Level level = housing.getWorldObj();
-        BlockPos housingCoords = housing.getCoordinates();
 		Vec3i area = VecUtil.scale(genome.getActiveValue(BeeChromosomes.TERRITORY), 2);
         int range = area.getX() * 2;
         int radius = area.getX();

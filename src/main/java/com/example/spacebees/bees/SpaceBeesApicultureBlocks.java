@@ -1,6 +1,8 @@
 package com.example.spacebees.bees;
 
 import forestry.api.core.ItemGroups;
+import forestry.apiculture.blocks.BlockAlveary;
+import forestry.apiculture.blocks.BlockAlvearyType;
 
 import com.example.spacebees.combs.BlockHoneyComb;
 import com.example.spacebees.combs.SBEnumHoneyComb;
@@ -20,4 +22,6 @@ public class SpaceBeesApicultureBlocks {
     @SuppressWarnings("null")
     public static final FeatureBlockGroup<BlockSpaceBeeHive, SpaceBeesBlockHiveType> BEEHIVE = REGISTRY.blockGroup(BlockSpaceBeeHive::new, SpaceBeesBlockHiveType.VALUES).itemWithType((block, type) -> new ItemBlockForestry<>(block, new Item.Properties().tab(ItemGroups.tabApiculture))).identifier("beehive").create();
     public static final FeatureBlockGroup<BlockHoneyComb, SBEnumHoneyComb> BEE_COMB = REGISTRY.blockGroup(BlockHoneyComb::new, SBEnumHoneyComb.VALUES).item(ItemBlockHoneyComb::new).identifier("block_bee_comb").create();
+    public static final FeatureBlockGroup<BlockSpaceBeesAlveary, SpaceBeesBlockAlvearyType> ALVEARY = REGISTRY.blockGroup(BlockSpaceBeesAlveary::new, SpaceBeesBlockAlvearyType.VALUES).itemWithType((block, type) -> new ItemBlockForestry<>(block, new Item.Properties().tab(ItemGroups.tabApiculture))).identifier("alveary").create();
+
 }

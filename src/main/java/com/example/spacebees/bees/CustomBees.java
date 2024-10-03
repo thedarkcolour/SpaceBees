@@ -73,6 +73,10 @@ public class CustomBees implements IForestryPlugin{
                 apiculture.registerBeeEffect(SpaceBeeEffects.LIGHTNING, new LightningEffect());
                 apiculture.registerBeeEffect(SpaceBeeEffects.ACID, new AcidEffect());
                 apiculture.registerBeeEffect(SpaceBeeEffects.BOSS, new BossEffect());
+                apiculture.registerBeeEffect(SpaceBeeEffects.HUNGER, new PotionBeeEffect(false, MobEffects.HUNGER, 100));
+                apiculture.registerBeeEffect(SpaceBeeEffects.FOOD, new FoodEffect());
+
+
 
 
 

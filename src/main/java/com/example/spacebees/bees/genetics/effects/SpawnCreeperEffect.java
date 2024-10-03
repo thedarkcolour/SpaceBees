@@ -9,16 +9,12 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 
 import java.util.Random;
-import org.slf4j.Logger;
-import com.mojang.logging.LogUtils;
-
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 
 public class SpawnCreeperEffect extends ThrottledBeeEffect {
-    private static final Logger LOGGER = LogUtils.getLogger();
     private Random r = new Random ();
     public SpawnCreeperEffect() {
         super(false, 100, true, false);
@@ -44,7 +40,7 @@ public class SpawnCreeperEffect extends ThrottledBeeEffect {
                 int groundY = level.getHeight(Heightmap.Types.WORLD_SURFACE, mobX, mobZ);
                 creeper.moveTo(mobX, groundY, mobZ,0,0); //TODO add random rotation
                 level.addFreshEntity(creeper);
-                //LOGGER.info("Spawning Creeper!");
+
             }
             return storedData; 
         }

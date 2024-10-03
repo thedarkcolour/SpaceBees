@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+      "particle": "spacebees:block/alveary_rainshield_side",
+      "down": "spacebees:block/alveary_rainshield_top",
+      "up": "spacebees:block/alveary_rainshield_top",
+      "north": "spacebees:block/alveary_rainshield_side",
+      "east": "spacebees:block/alveary_rainshield_side",
+      "south": "spacebees:block/alveary_rainshield_side",
+      "west": "spacebees:block/alveary_rainshield_side"
+    }
+}

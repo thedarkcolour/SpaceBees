@@ -9,16 +9,12 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 
 import java.util.Random;
-import org.slf4j.Logger;
-import com.mojang.logging.LogUtils;
-
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 
 public class SpawnSkeletonEffect extends ThrottledBeeEffect {
-    private static final Logger LOGGER = LogUtils.getLogger();
     private Random r = new Random ();
     public SpawnSkeletonEffect() {
         super(false, 100, true, false);
@@ -44,7 +40,7 @@ public class SpawnSkeletonEffect extends ThrottledBeeEffect {
                 int groundY = level.getHeight(Heightmap.Types.WORLD_SURFACE, mobX, mobZ);
                 skeleton.moveTo(mobX, groundY, mobZ,0,0); //TODO add random rotation
                 level.addFreshEntity(skeleton);
-                //LOGGER.info("Spawning Skeleton!");
+
             }
             return storedData; 
         }
