@@ -16,7 +16,7 @@ public class TileAlvearyRainShield extends TileAlveary implements IAlvearyCompon
 	private static final IBeeModifier MODIFIER = new IBeeModifier() {
 		@Override
 		public boolean isSealed() {
-			LOGGER.info("IBeeModifier Modifier isSealed sent True");
+			LOGGER.info("IBeeModifier Modifier isSealed sent True"); //troubleshooting
 			return true;
 			
 		}
@@ -27,8 +27,6 @@ public class TileAlvearyRainShield extends TileAlveary implements IAlvearyCompon
     }
 	@Override
 	public IBeeModifier getBeeModifier() {
-		LOGGER.info("getBeeModifer sent isSealed sent True");
-		MODIFIER.isSealed();
 		return MODIFIER;
 	}
 
