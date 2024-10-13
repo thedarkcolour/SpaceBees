@@ -2,8 +2,9 @@ package com.example.spacebees.bees;
 
 import java.awt.Color;
 
+import com.example.spacebees.Features.SpaceBeesApicultureItems;
+import com.example.spacebees.bees.genetics.SpaceBeeAlleles;
 import com.example.spacebees.combs.SBEnumHoneyComb;
-import com.example.spacebees.combs.SpaceBeesApicultureItems;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
@@ -69,6 +70,7 @@ public class CustomBeeSpecies {
 					mutations.add(SpaceBeesSpecies.LUNA, ForestryBeeSpecies.INDUSTRIOUS, 10);
 				})
 				.setAuthority("PantyRush");
+				
 
 
 		//Binnie's 
@@ -103,7 +105,7 @@ public class CustomBeeSpecies {
 
 				.setAuthority("PantyRush");		
 		
-				//From ExtraBees, Work In Progress TODO: add correct allels 
+		//From ExtraBees, Work In Progress TODO: add correct allels 
 
 		apiculture.registerSpecies(SpaceBeesSpecies.BARREN, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_BARREN, true, new Color(0xe0d263))
 		.setBody(new Color(0xcbe374))

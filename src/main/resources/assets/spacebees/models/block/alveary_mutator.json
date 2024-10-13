@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+      "particle": "spacebees:block/alveary_mutator_top",
+      "down": "spacebees:block/alveary_mutator_top",
+      "up": "spacebees:block/alveary_mutator_top",
+      "north": "spacebees:block/alveary_mutator_top",
+      "east": "spacebees:block/alveary_mutator_top",
+      "south": "spacebees:block/alveary_mutator_top",
+      "west": "spacebees:block/alveary_mutator_top"
+    }
+}

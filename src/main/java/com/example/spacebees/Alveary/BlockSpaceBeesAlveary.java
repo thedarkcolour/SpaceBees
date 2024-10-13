@@ -1,6 +1,9 @@
-package com.example.spacebees.bees;
+package com.example.spacebees.Alveary;
 
 import javax.annotation.Nullable;
+
+import com.example.spacebees.Features.SpaceBeesApicultureTiles;
+
 import java.util.List;
 import forestry.apiculture.MaterialBeehive;
 import net.minecraft.client.gui.screens.Screen;
@@ -46,8 +49,11 @@ public class BlockSpaceBeesAlveary extends BlockStructure implements EntityBlock
 	}
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
 		return switch (type) {
-			case RAINSHIELD -> new TileAlvearyRainShield(pos, state);
-			case LIGHTING -> new TileAlvearyLighting(pos, state);
+			//CRASH IS HERE
+			case RAINSHIELD -> new TileAlvearyRainShield(SpaceBeesApicultureTiles.ALVEARY_RAINSHIELD.tileType(), "rainshield", pos, state);
+			case LIGHTING -> new TileAlvearyLighting(SpaceBeesApicultureTiles.ALVEARY_LIGHTING.tileType(), "TileAlvearyLighting", pos, state);
+			case MUTATOR -> new TileAlvearyCreativeMutator(SpaceBeesApicultureTiles.ALVEARY_MUTATOR.tileType(), "TileAlvearyCreativeMutator", pos, state);
+
         };
 
 		}

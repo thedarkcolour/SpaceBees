@@ -151,7 +151,9 @@
 "block.spacebees.block_bee_comb_barren": "Barren Comb Block",
 "block.spacebees.alveary_tooltip": "Multi-Block: 3x3x3 with 3x1x3 wood slabs on the top",
 "block.spacebees.alveary_lighting": "Alveary Lighting",
-"block.spacebees.alveary_rainshield": "Rain Shield"
+"block.spacebees.alveary_rainshield": "Rain Shield",
+"block.spacebees.alveary_mutator": "Alveary Mutator"
+
 
 
 }

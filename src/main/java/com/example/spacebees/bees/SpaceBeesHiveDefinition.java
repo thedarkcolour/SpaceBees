@@ -2,6 +2,8 @@ package com.example.spacebees.bees;
 
 import java.util.List;
 
+import com.example.spacebees.Features.SpaceBeesApicultureBlocks;
+import com.example.spacebees.bees.genetics.hives.HiveGenEmbedInWall;
 import com.example.spacebees.bees.genetics.hives.HiveGenNether;
 import com.example.spacebees.bees.genetics.hives.HiveGenWater;
 
@@ -43,7 +45,7 @@ public enum SpaceBeesHiveDefinition implements IHiveDefinition{
 			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
 		}
 	},
-	WATER(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.WATER).defaultState(), 6000f, SpaceBeesSpecies.WATER, new HiveGenWater(Blocks.CLAY, Blocks.SAND, Blocks.GRAVEL)) {
+	WATER(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.WATER).defaultState(), 20f, SpaceBeesSpecies.WATER, new HiveGenWater(Blocks.CLAY, Blocks.SAND, Blocks.GRAVEL)) {
 		@Override
 		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
 			postGenFlowers(world, rand, pos, flowerStates);
@@ -55,7 +57,7 @@ public enum SpaceBeesHiveDefinition implements IHiveDefinition{
 			//change this to river, ocean, warm_ocean etcetcetc
 		}
 	},
-	ROCK(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.ROCK).defaultState(), 0f, SpaceBeesSpecies.ROCK, new HiveGenGround(Blocks.GRASS_BLOCK)) {
+	ROCK(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.ROCK).defaultState(), 60000f, SpaceBeesSpecies.ROCK, new HiveGenEmbedInWall(Blocks.STONE,Blocks.SMOOTH_STONE,Blocks.DEEPSLATE,Blocks.DIORITE,Blocks.ANDESITE,Blocks.GRANITE)) {
 		@Override
 		public void postGen(WorldGenLevel world, RandomSource rand, BlockPos pos) {
 			postGenFlowers(world, rand, pos, flowerStates);
@@ -64,7 +66,7 @@ public enum SpaceBeesHiveDefinition implements IHiveDefinition{
 		@Override
 		public boolean isGoodBiome(Holder<Biome> biome) {
 			//TODO: Add Correct Spawning
-			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
+			return super.isGoodBiome(biome);
 		}
 	},
 	MARBLE(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.MARBLE).defaultState(), 0f, SpaceBeesSpecies.MARBLE, new HiveGenGround(Blocks.GRASS_BLOCK)) {
@@ -79,7 +81,7 @@ public enum SpaceBeesHiveDefinition implements IHiveDefinition{
 			return super.isGoodBiome(biome) && !biome.is(Tags.Biomes.IS_SNOWY);
 		}
 	},
-	NETHER(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.NETHER).defaultState(), 6000f, SpaceBeesSpecies.EMBITTERED, new HiveGenNether(Blocks.BASALT, Blocks.NETHERRACK, Blocks.WARPED_NYLIUM, Blocks.CRIMSON_NYLIUM, Blocks.SOUL_SAND, Blocks.SOUL_SOIL)) {
+	NETHER(SpaceBeesApicultureBlocks.BEEHIVE.get(SpaceBeesBlockHiveType.NETHER).defaultState(), 6000f, SpaceBeesSpecies.EMBITTERED, new HiveGenEmbedInWall(Blocks.NETHERRACK)) {
 		@Override
 		public boolean isGoodBiome(Holder<Biome> biome) {
 			//TODO: Add Correct Spawning, this doesn't work as intended

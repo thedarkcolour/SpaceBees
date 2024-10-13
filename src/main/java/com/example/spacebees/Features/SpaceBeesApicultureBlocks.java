@@ -1,9 +1,14 @@
-package com.example.spacebees.bees;
+package com.example.spacebees.Features;
 
 import forestry.api.core.ItemGroups;
 import forestry.apiculture.blocks.BlockAlveary;
 import forestry.apiculture.blocks.BlockAlvearyType;
 
+import com.example.spacebees.Alveary.BlockSpaceBeesAlveary;
+import com.example.spacebees.Alveary.SpaceBeesBlockAlvearyType;
+import com.example.spacebees.bees.BlockSpaceBeeHive;
+import com.example.spacebees.bees.SpaceBeesBlockHiveType;
+import com.example.spacebees.bees.SpaceBeesModuleIds;
 import com.example.spacebees.combs.BlockHoneyComb;
 import com.example.spacebees.combs.SBEnumHoneyComb;
 import com.example.spacebees.combs.ItemBlockHoneyComb;

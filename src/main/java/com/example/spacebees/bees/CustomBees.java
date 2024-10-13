@@ -15,7 +15,8 @@ import forestry.api.plugin.IApicultureRegistration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ItemStack;
-import com.example.spacebees.combs.SpaceBeesApicultureItems;
+
+import com.example.spacebees.Features.SpaceBeesApicultureItems;
 import com.example.spacebees.bees.genetics.effects.*;
 // Use Default Forestry Plugin as an example
 // https://github.com/thedarkcolour/ForestryMC/blob/dev/1.19.x/src/main/java/forestry/plugin/DefaultForestryPlugin.java

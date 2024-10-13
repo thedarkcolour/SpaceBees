@@ -1,4 +1,4 @@
-package com.example.spacebees.bees;
+package com.example.spacebees.bees.genetics;
 
 import forestry.api.IForestryApi;
 import forestry.api.apiculture.IFlowerType;
@@ -6,6 +6,8 @@ import forestry.api.apiculture.genetics.IBeeEffect;
 import forestry.api.genetics.alleles.BeeChromosomes;
 import forestry.api.genetics.alleles.IAlleleManager;
 import forestry.api.genetics.alleles.IRegistryAllele;
+
+import com.example.spacebees.bees.SpaceBeesFlowerType;
 import com.example.spacebees.bees.genetics.effects.*;
 
 
