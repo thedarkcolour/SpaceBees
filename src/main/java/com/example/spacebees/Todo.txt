@@ -5,13 +5,7 @@ Properly include dependencies
 Fix Taxa
 add correct stats to extrabees bees
 Properly credit people from forestry/extrabees etc
-
----Featueres---
-
-make an Alveary block
-
-
-
+Add Honey Drops
 
 
 ---extrabees import---
@@ -22,7 +16,7 @@ write scripts
 
     Pull branch information for Taxa? 
 
-Mod intergration
+Mod intergration?
 IC2 replacement? https://www.curseforge.com/minecraft/mc-mods/ic2-classic 
 Botania is Botania https://www.curseforge.com/minecraft/mc-mods/botania
 

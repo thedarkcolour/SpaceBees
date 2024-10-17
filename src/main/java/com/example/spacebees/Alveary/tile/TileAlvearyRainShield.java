@@ -1,4 +1,4 @@
-package com.example.spacebees.Alveary;
+package com.example.spacebees.Alveary.tile;
 
 
 import forestry.api.apiculture.IBeeModifier;
@@ -24,7 +24,7 @@ public class TileAlvearyRainShield extends TileAlveary implements IAlvearyCompon
 		
     }
 	public TileAlvearyRainShield(BlockPos pos, BlockState state) {
-        super(SpaceBeesApicultureTiles.ALVEARY_RAINSHIELD.tileType(), "alveary_rainshield", pos, state);
+        super(SpaceBeesApicultureTiles.ALVEARY_RAINSHIELD.tileType(), "Alveary", pos, state);
 		
     }
 	@Override

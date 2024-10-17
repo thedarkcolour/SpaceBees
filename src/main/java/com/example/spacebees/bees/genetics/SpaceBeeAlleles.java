@@ -5,6 +5,7 @@ import forestry.api.apiculture.IFlowerType;
 import forestry.api.apiculture.genetics.IBeeEffect;
 import forestry.api.genetics.alleles.BeeChromosomes;
 import forestry.api.genetics.alleles.IAlleleManager;
+import forestry.api.genetics.alleles.IIntegerAllele;
 import forestry.api.genetics.alleles.IRegistryAllele;
 
 import com.example.spacebees.bees.SpaceBeesFlowerType;
@@ -36,6 +37,9 @@ public class SpaceBeeAlleles {
     public static final IRegistryAllele<IBeeEffect> EFFECT_BOSS = REGISTRY.registryAllele(SpaceBeeEffects.BOSS, BeeChromosomes.EFFECT);
     public static final IRegistryAllele<IBeeEffect> EFFECT_HUNGER = REGISTRY.registryAllele(SpaceBeeEffects.HUNGER, BeeChromosomes.EFFECT);
     public static final IRegistryAllele<IBeeEffect> EFFECT_FOOD = REGISTRY.registryAllele(SpaceBeeEffects.FOOD, BeeChromosomes.EFFECT);
+
+    public static final IIntegerAllele LIFESPAN_INSTANT = REGISTRY.intAllele(1, true);
+
 
 
 

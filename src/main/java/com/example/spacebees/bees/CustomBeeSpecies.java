@@ -29,8 +29,7 @@ import forestry.apiculture.features.ApicultureItems;
 public class CustomBeeSpecies {
     	@SuppressWarnings({ "CodeBlock2Expr", "deprecation" })
 	public static void register(IApicultureRegistration apiculture) {
-		// apiculture.registerSpecies(resource location, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_XXX, true?, new Color(0xa3999c))
-		// Lunar
+		// Lunar Branch
 		apiculture.registerSpecies(SpaceBeesSpecies.LUNA, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_LUNA, true, new Color(0xa3999c))
 				.addProduct(ApicultureItems.BEE_COMBS.stack(EnumHoneyComb.PARCHED), 0.20f)
 				.addProduct(SpaceBeesApicultureItems.BEE_COMBS.stack(SBEnumHoneyComb.BARREN), 0.45f)
@@ -58,19 +57,27 @@ public class CustomBeeSpecies {
 		
 		// Smedley
 		apiculture.registerSpecies(SpaceBeesSpecies.SMEDLEY, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_SMEDLEY, true, new Color(0x4f10c4))
-		//.addProduct(BEE_COMBS.stack(EnumHoneyComb.PARCHED), 0.30f)
 				.setBody(new Color(0x281e5c))
 				.setStripes(new Color(0x9e7b3a))
 				.setGenome(genome -> {
 					genome.set(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_NONE);
-					genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_BOSS);
+					genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_SHORTEST); //use for testing mutator
 
 				})		
 				.addMutations(mutations -> {
 					mutations.add(SpaceBeesSpecies.LUNA, ForestryBeeSpecies.INDUSTRIOUS, 10);
 				})
 				.setAuthority("PantyRush");
-				
+		// Nourishing
+		// Only used to test food effect
+		apiculture.registerSpecies(SpaceBeesSpecies.NOURISHING, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_NOURISHING, true, new Color(0xFFC72C))
+				.setBody(new Color(0xDA291C))
+				.setStripes(new Color(0xFFC72C))
+				.setGenome(genome -> {
+					genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_FOOD);
+		})
+
+		.setAuthority("PantyRush");		
 
 
 		//Binnie's 
@@ -96,14 +103,7 @@ public class CustomBeeSpecies {
 				
 				.setAuthority("Binnie");
 		
-		apiculture.registerSpecies(SpaceBeesSpecies.NOURISHING, ForestryTaxa.GENUS_HONEY, SpaceBeesTaxa.SPECIES_NOURISHING, true, new Color(0xFFC72C))
-				.setBody(new Color(0xDA291C))
-				.setStripes(new Color(0xFFC72C))
-				.setGenome(genome -> {
-					genome.set(BeeChromosomes.EFFECT, SpaceBeeAlleles.EFFECT_FOOD);
-				})
 
-				.setAuthority("PantyRush");		
 		
 		//From ExtraBees, Work In Progress TODO: add correct allels 
 

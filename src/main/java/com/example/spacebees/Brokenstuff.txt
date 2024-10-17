@@ -1,4 +1,12 @@
 Broken Stuff
 ----------------------
 texture on custom block_bee_combs broken, its using the default texture
+    https://github.com/thedarkcolour/ForestryMC/blob/8dada2e4c9bf7527fbec557e37d945dadaae3e9c/src/main/java/forestry/core/client/CoreClientHandler.java#L111
 colors on combs are wrong too, registration issue?
+    hardcode? how many combs are there?
+    https://github.com/thedarkcolour/ForestryMC/blob/8dada2e4c9bf7527fbec557e37d945dadaae3e9c/src/main/java/forestry/core/client/CoreClientHandler.java#L111
+Alveary mutator missing menu texture
+    Create somethings similar to EnumCraftingMaterial
+    https://github.com/thedarkcolour/ForestryMC/blob/dev/1.19.x/src/main/java/forestry/core/items/definitions/EnumCraftingMaterial.java#L20
+
+    

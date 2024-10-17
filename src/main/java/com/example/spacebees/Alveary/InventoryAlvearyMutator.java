@@ -1,20 +1,32 @@
 package com.example.spacebees.Alveary;
 
-import forestry.core.features.CoreItems;
+import com.example.spacebees.Alveary.tile.TileAlvearyMutator;
+
 import forestry.core.inventory.InventoryAdapterTile;
-import forestry.core.items.definitions.EnumCraftingMaterial;
-import forestry.core.utils.ItemStackUtil;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
-public class InventoryAlvearyMutator extends InventoryAdapterTile<TileAlvearyCreativeMutator> {
+public class InventoryAlvearyMutator extends InventoryAdapterTile<TileAlvearyMutator> {
 
-    public InventoryAlvearyMutator (TileAlvearyCreativeMutator alvearyMutator) {
-		super(alvearyMutator, 1, "Items"); //changed to 5 to see if I can stop crashing, this causes the crash index X is out of bounds for length X
+    public InventoryAlvearyMutator (TileAlvearyMutator alvearyMutator) {
+		super(alvearyMutator, 1, "Items"); 
 	}
 
     @Override
 	public boolean canSlotAccept(int slotIndex, ItemStack stack) {
-		return ItemStackUtil.isIdenticalItem(CoreItems.CRAFTING_MATERIALS.stack(EnumCraftingMaterial.WOVEN_SILK, 1), stack); //TODO change this to being correct
+		if (stack.is(Items.SOUL_SAND)){
+			return true;
+		} 
+		if (stack.is(Items.ENDER_EYE)){
+			return true;
+		}
+		if (stack.is(Items.ENDER_PEARL)){
+			return true;
+		}
+		if (stack.is(Items.NETHER_STAR)){
+			return true;
+		}
+		return false;
     }
 
 }

@@ -2,6 +2,9 @@ package com.example.spacebees.Alveary;
 
 import javax.annotation.Nullable;
 
+import com.example.spacebees.Alveary.tile.TileAlvearyMutator;
+import com.example.spacebees.Alveary.tile.TileAlvearyLighting;
+import com.example.spacebees.Alveary.tile.TileAlvearyRainShield;
 import com.example.spacebees.Features.SpaceBeesApicultureTiles;
 
 import java.util.List;
@@ -52,7 +55,7 @@ public class BlockSpaceBeesAlveary extends BlockStructure implements EntityBlock
 			//CRASH IS HERE
 			case RAINSHIELD -> new TileAlvearyRainShield(SpaceBeesApicultureTiles.ALVEARY_RAINSHIELD.tileType(), "rainshield", pos, state);
 			case LIGHTING -> new TileAlvearyLighting(SpaceBeesApicultureTiles.ALVEARY_LIGHTING.tileType(), "TileAlvearyLighting", pos, state);
-			case MUTATOR -> new TileAlvearyCreativeMutator(SpaceBeesApicultureTiles.ALVEARY_MUTATOR.tileType(), "TileAlvearyCreativeMutator", pos, state);
+			case MUTATOR -> new TileAlvearyMutator(SpaceBeesApicultureTiles.ALVEARY_MUTATOR.tileType(), "TileAlvearyCreativeMutator", pos, state);
 
         };
 

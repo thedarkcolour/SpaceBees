@@ -1,25 +1,18 @@
 package com.example.spacebees;
 
-import com.example.spacebees.Alveary.ContainerAlvearyMutator;
-import com.example.spacebees.Alveary.GuiAlvearyMutator;
+
+import com.example.spacebees.Alveary.gui.GuiAlvearyMutator;
 import com.example.spacebees.Features.SpaceBeesApicultureMenuTypes;
 import com.mojang.logging.LogUtils;
 
 import forestry.apiculture.features.ApicultureBlocks;
-import forestry.apiculture.features.ApicultureMenuTypes;
-import forestry.apiculture.gui.ContainerBeeHousing;
-import forestry.apiculture.gui.GuiAlveary;
-import forestry.apiculture.gui.GuiAlvearyHygroregulator;
-import forestry.apiculture.gui.GuiAlvearySieve;
-import forestry.apiculture.gui.GuiAlvearySwarmer;
-import forestry.apiculture.gui.GuiBeeHousing;
-import net.minecraft.client.Minecraft;
+import forestry.core.models.ClientManager;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -32,7 +25,11 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraft.world.inventory.AbstractContainerMenu;
+import com.example.spacebees.Features.SpaceBeesApicultureBlocks;
+import com.example.spacebees.Features.SpaceBeesApicultureItems;
+import com.example.spacebees.CoreClientHandler;
+
+
 
 import org.slf4j.Logger;
 
@@ -66,8 +63,12 @@ public class SpaceBees
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-       
-       
+        
+        CoreClientHandler coreClientHandler = new CoreClientHandler();
+        coreClientHandler.registerEvents(modEventBus);
+        
+
+
         
     }
 
@@ -99,12 +100,15 @@ public class SpaceBees
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event){
             // Some client setup code
-          
+        MenuScreens.register(SpaceBeesApicultureMenuTypes.ALVEARY_MUTATOR.menuType(), GuiAlvearyMutator::new);
+        
 
         }
+  
        
 
     }
 
+   
     
 }

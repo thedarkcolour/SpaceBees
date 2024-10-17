@@ -1,4 +1,4 @@
-package com.example.spacebees.Alveary;
+package com.example.spacebees.Alveary.tile;
 
 import com.example.spacebees.Features.SpaceBeesApicultureTiles;
 
@@ -21,7 +21,7 @@ public class TileAlvearyLighting extends TileAlveary implements IAlvearyComponen
         super(type, "alveary_lighting", pos, state);
     }
 	public TileAlvearyLighting(BlockPos pos, BlockState state) {
-        super(SpaceBeesApicultureTiles.ALVEARY_LIGHTING.tileType(), "alveary_lighting", pos, state);
+        super(SpaceBeesApicultureTiles.ALVEARY_LIGHTING.tileType(), "Alveary", pos, state);
     }
 
 
